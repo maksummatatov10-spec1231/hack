@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<security-config>
+    <ftp-server>
+        <allow-anonymous>false</allow-anonymous>
+        <require-password>true</require-password>
+        <min-password-length>8</min-password-length>
+        <max-connections>5</max-connections>
+        <encryption>FTPS</encryption>
+    </ftp-server>
+    <http-server>
+        <require-auth>true</require-auth>
+        <token-auth>true</token-auth>
+        <https>true</https>
+        <rate-limit>100</rate-limit>
+    </http-server>
+    <cloud>
+        <validate-certificates>true</validate-certificates>
+        <token-refresh-buffer>300</token-refresh-buffer>
+    </cloud>
+    <webview>
+        <allowed-domains>
+            <domain>dropbox.com</domain>
+            <domain>box.com</domain>
+            <domain>pcloud.com</domain>
+            <domain>yandex.com</domain>
+            <domain>yandex.ru</domain>
+            <domain>google.com</domain>
+            <domain>googleapis.com</domain>
+        </allowed-domains>
+        <block-javascript-urls>true</block-javascript-urls>
+        <block-data-urls>true</block-data-urls>
+    </webview>
+</security-config>
